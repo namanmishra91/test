@@ -1,0 +1,200 @@
+{
+  "paragraphs": [
+    {
+      "text": "sc.version",
+      "user": "namanm@qubole.com",
+      "dateUpdated": "Apr 12, 2018 6:11:33 AM",
+      "config": {
+        "colWidth": 12.0,
+        "graph": {
+          "mode": "table",
+          "height": 300.0,
+          "optionOpen": false,
+          "keys": [],
+          "values": [],
+          "groups": [],
+          "scatter": {}
+        },
+        "enabled": true
+      },
+      "settings": {
+        "params": {},
+        "forms": {}
+      },
+      "version": "v1",
+      "jobName": "paragraph_1497265972494_-1992580396",
+      "id": "20170612-111252_1499011403_q_NTTAVXE2QC1497265237",
+      "result": {
+        "code": "ERROR",
+        "type": "TEXT",
+        "msg": "org.apache.spark.SparkException: Yarn application has already ended! It might have been killed or unable to launch application master.\n\tat org.apache.spark.scheduler.cluster.YarnClientSchedulerBackend.waitForApplication(YarnClientSchedulerBackend.scala:114)\n\tat org.apache.spark.scheduler.cluster.YarnClientSchedulerBackend.start(YarnClientSchedulerBackend.scala:91)\n\tat org.apache.spark.scheduler.TaskSchedulerImpl.start(TaskSchedulerImpl.scala:156)\n\tat org.apache.spark.SparkContext.\u003cinit\u003e(SparkContext.scala:618)\n\tat org.apache.spark.SparkContext$.getOrCreate(SparkContext.scala:2557)\n\tat org.apache.spark.sql.SparkSession$Builder$$anonfun$8.apply(SparkSession.scala:888)\n\tat org.apache.spark.sql.SparkSession$Builder$$anonfun$8.apply(SparkSession.scala:880)\n\tat scala.Option.getOrElse(Option.scala:121)\n\tat org.apache.spark.sql.SparkSession$Builder.getOrCreate(SparkSession.scala:880)\n\tat sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)\n\tat sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:57)\n\tat sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)\n\tat java.lang.reflect.Method.invoke(Method.java:606)\n\tat org.apache.zeppelin.spark.Utils.invokeMethodWithException(Utils.java:60)\n\tat org.apache.zeppelin.spark.Utils.invokeMethodWithException(Utils.java:45)\n\tat org.apache.zeppelin.spark.SparkInterpreter.createSparkSession(SparkInterpreter.java:493)\n\tat org.apache.zeppelin.spark.SparkInterpreter.getSparkSession(SparkInterpreter.java:367)\n\tat org.apache.zeppelin.spark.SparkInterpreter.open(SparkInterpreter.java:1029)\n\tat org.apache.zeppelin.interpreter.LazyOpenInterpreter.open(LazyOpenInterpreter.java:74)\n\tat org.apache.zeppelin.interpreter.LazyOpenInterpreter.interpret(LazyOpenInterpreter.java:108)\n\tat org.apache.zeppelin.interpreter.remote.RemoteInterpreterServer$InterpretJob.jobRun(RemoteInterpreterServer.java:421)\n\tat org.apache.zeppelin.scheduler.Job.run(Job.java:195)\n\tat org.apache.zeppelin.scheduler.FIFOScheduler$1.run(FIFOScheduler.java:139)\n\tat java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:471)\n\tat java.util.concurrent.FutureTask.run(FutureTask.java:262)\n\tat java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask.access$201(ScheduledThreadPoolExecutor.java:178)\n\tat java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask.run(ScheduledThreadPoolExecutor.java:292)\n\tat java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1145)\n\tat java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:615)\n\tat java.lang.Thread.run(Thread.java:745)\n"
+      },
+      "dateCreated": "Jun 12, 2017 11:12:52 AM",
+      "dateSubmitted": "Apr 12, 2018 6:11:33 AM",
+      "dateStarted": "Apr 12, 2018 6:11:36 AM",
+      "dateFinished": "Apr 12, 2018 6:11:54 AM",
+      "status": "ERROR",
+      "progressUpdateIntervalMs": 500
+    },
+    {
+      "text": "val df\u003dsc.parallelize(Seq(\n  (1,\"example1\", Seq(0,2,4)),\n  (2,\"example2\", Seq(1,20,5)))).toDF().collect()",
+      "user": "namanm@qubole.com",
+      "dateUpdated": "Sep 11, 2017 7:05:29 AM",
+      "config": {
+        "colWidth": 12.0,
+        "graph": {
+          "mode": "table",
+          "height": 300.0,
+          "optionOpen": false,
+          "keys": [],
+          "values": [],
+          "groups": [],
+          "scatter": {}
+        },
+        "enabled": true,
+        "editorMode": "ace/mode/scala"
+      },
+      "settings": {
+        "params": {},
+        "forms": {}
+      },
+      "jobName": "paragraph_1505113527580_2125821602",
+      "id": "20170911-070527_802698468_q_NTTAVXE2QC1497265237",
+      "result": {
+        "code": "SUCCESS",
+        "type": "TEXT",
+        "msg": "\ndf: Array[org.apache.spark.sql.Row] \u003d Array([1,example1,WrappedArray(0, 2, 4)], [2,example2,WrappedArray(1, 20, 5)])\n"
+      },
+      "dateCreated": "Sep 11, 2017 7:05:27 AM",
+      "dateStarted": "Sep 11, 2017 7:05:29 AM",
+      "dateFinished": "Sep 11, 2017 7:05:38 AM",
+      "status": "FINISHED",
+      "progressUpdateIntervalMs": 500
+    },
+    {
+      "text": "%pyspark\nprint a",
+      "user": "namanm@qubole.com",
+      "dateUpdated": "Jul 12, 2017 11:40:04 AM",
+      "config": {
+        "colWidth": 12.0,
+        "graph": {
+          "mode": "table",
+          "height": 300.0,
+          "optionOpen": false,
+          "keys": [],
+          "values": [],
+          "groups": [],
+          "scatter": {}
+        },
+        "enabled": true,
+        "editorMode": "ace/mode/scala"
+      },
+      "settings": {
+        "params": {},
+        "forms": {}
+      },
+      "jobName": "paragraph_1499334642751_-203407640",
+      "id": "20170706-095042_1323682588_q_NTTAVXE2QC1497265237",
+      "result": {
+        "code": "ERROR",
+        "type": "TEXT",
+        "msg": "Traceback (most recent call last):\n  File \"/tmp/zeppelin_pyspark-2072597231113251116.py\", line 279, in \u003cmodule\u003e\n    raise Exception(traceback.format_exc())\nException: Traceback (most recent call last):\n  File \"/tmp/zeppelin_pyspark-2072597231113251116.py\", line 277, in \u003cmodule\u003e\n    exec(code)\n  File \"\u003cstdin\u003e\", line 1, in \u003cmodule\u003e\nNameError: name \u0027a\u0027 is not defined\n\n"
+      },
+      "dateCreated": "Jul 6, 2017 9:50:42 AM",
+      "dateStarted": "Jul 12, 2017 11:40:04 AM",
+      "dateFinished": "Jul 12, 2017 11:40:05 AM",
+      "status": "ERROR",
+      "progressUpdateIntervalMs": 500
+    },
+    {
+      "text": "sc.stop()",
+      "user": "namanm@qubole.com",
+      "dateUpdated": "Jul 12, 2017 11:40:27 AM",
+      "config": {
+        "colWidth": 12.0,
+        "graph": {
+          "mode": "table",
+          "height": 300.0,
+          "optionOpen": false,
+          "keys": [],
+          "values": [],
+          "groups": [],
+          "scatter": {}
+        },
+        "enabled": true,
+        "editorMode": "ace/mode/scala"
+      },
+      "settings": {
+        "params": {},
+        "forms": {}
+      },
+      "jobName": "paragraph_1499336575625_-1726134349",
+      "id": "20170706-102255_1018334783_q_NTTAVXE2QC1497265237",
+      "result": {
+        "code": "SUCCESS",
+        "type": "TEXT",
+        "msg": ""
+      },
+      "dateCreated": "Jul 6, 2017 10:22:55 AM",
+      "dateStarted": "Jul 12, 2017 11:40:27 AM",
+      "dateFinished": "Jul 12, 2017 11:40:28 AM",
+      "status": "ERROR",
+      "progressUpdateIntervalMs": 500
+    },
+    {
+      "text": "sdcver",
+      "user": "namanm@qubole.com",
+      "dateUpdated": "Mar 16, 2018 9:26:05 AM",
+      "config": {
+        "colWidth": 12.0,
+        "graph": {
+          "mode": "table",
+          "height": 300.0,
+          "optionOpen": false,
+          "keys": [],
+          "values": [],
+          "groups": [],
+          "scatter": {}
+        },
+        "enabled": true,
+        "editorMode": "ace/mode/scala"
+      },
+      "settings": {
+        "params": {},
+        "forms": {}
+      },
+      "jobName": "paragraph_1499859627607_-577291701",
+      "id": "20170712-114027_867846877_q_NTTAVXE2QC1497265237",
+      "dateCreated": "Jul 12, 2017 11:40:27 AM",
+      "status": "READY",
+      "progressUpdateIntervalMs": 500
+    },
+    {
+      "text": "",
+      "config": {},
+      "settings": {
+        "params": {},
+        "forms": {}
+      },
+      "version": "v0",
+      "jobName": "paragraph_1524565204503_-896746341",
+      "id": "20180424-102004_1071722282_q_NTTAVXE2QC1497265237",
+      "dateCreated": "Apr 24, 2018 10:20:04 AM",
+      "status": "READY",
+      "progressUpdateIntervalMs": 1000
+    }
+  ],
+  "name": "note2",
+  "id": "NTTAVXE2QC1497265237",
+  "angularObjects": {
+    "2DFJXWUGV888561529575451450:shared_process": [],
+    "2DJWTC1R9888561529575451457:shared_process": [],
+    "2DH6CV24Q888561529575451443:shared_process": [],
+    "2DK7EK54Q888561529575463424:shared_process": []
+  },
+  "config": {
+    "isDashboard": false
+  },
+  "info": {},
+  "source": "FCN"
+}
